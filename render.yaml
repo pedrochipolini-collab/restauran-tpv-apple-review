@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: restauran-tpv-apple-review
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: REVIEW_USERNAME
+        value: apple-review
+      - key: REVIEW_PASSWORD
+        sync: false
+      - key: REVIEW_API_KEY
+        value: ""
